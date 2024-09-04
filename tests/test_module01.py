@@ -31,3 +31,7 @@ def test_multiplicacao(a, b, result):
 @pytest.mark.parametrize("a, b, result", [(10, 5, 5), (100, 50, 50), (5000, 2000, 3000)])
 def test_subtracao(a, b, result):
     assert a - b == result, f"Erro na soma: {a} + {b} deveria ser {result}, mas obteve {a + b}"
+
+@pytest.mark.parametrize("nome", [("Ricardo")])
+def test_verificaNome(nome):
+    assert nome == 'Ricardo'
